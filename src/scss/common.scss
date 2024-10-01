@@ -1,1 +1,30 @@
-// Заголовки, загальні БЕМ блоки та інше...
+.page {
+	display: flex;
+	&__container {
+		width: 100%;
+		display: flex;
+		gap: toRem(30);
+	}
+	&__content {
+		flex: 1 1 auto;
+	}
+}
+
+.divider {
+	display: flex;
+	height: toRem(2);
+	width: 100%;
+	background: #9564aa;
+	opacity: 0.2;
+}
+.timer {
+	display: flex;
+	padding: toRem(5) toRem(20);
+	background-color: var(--inverse);
+	border-radius: var(--borderRadius);
+	overflow: hidden;
+	&__item {
+		font-weight: 400;
+		font-size: toRem(40);
+	}
+}
