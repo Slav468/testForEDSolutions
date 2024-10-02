@@ -204,7 +204,13 @@ h6 {
   font-size: 2.5rem
 }
 [class*=__container] {
-  padding: 0
+  padding: 0 1.25rem
+}
+.swiper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem
 }
 .swiper-initialized {
   touch-action: pan-y
@@ -272,6 +278,9 @@ h6 {
   display: flex;
   align-items: center
 }
+.logo {
+  display: none
+}
 .menu__list {
   display: flex;
   align-items: center;
@@ -301,10 +310,20 @@ h6 {
   height: .9375rem;
   color: var(--third)
 }
+.premium-mobile {
+  display: flex
+}
+.aside-menu {
+  display: none
+}
 .promo {
   display: flex;
   flex-direction: column;
   gap: 1.25rem
+}
+.promo__title {
+  font-weight: 700;
+  font-size: 20px
 }
 .promo__content {
   width: 100%;
@@ -312,17 +331,79 @@ h6 {
   flex-direction: column;
   gap: 1.5625rem
 }
+.promo-banner {
+  display: none
+}
+.promo-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem
+}
+.promo-button {
+  width: 100%;
+  height: 3.4375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  background-color: var(--bg-third);
+  border-radius: var(--borderRadius)
+}
 .promo-teaser {
   align-self: center
 }
 .card {
   width: 100%
 }
+.card__item {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  border-radius: var(--borderRadius);
+  height: 3.75rem
+}
+.card__content {
+  width: 93%;
+  height: 100%;
+  display: flex;
+  gap: .6875rem;
+  padding: .875rem;
+  justify-content: flex-end;
+  background: var(--primary);
+  border-radius: var(--borderRadius)
+}
+.card__button {
+  display: none
+}
+.billet {
+  padding: .1875rem .625rem;
+  border-radius: .3125rem;
+  overflow: hidden;
+  font-weight: 700;
+  font-size: .875rem;
+  background-color: var(--bg-third);
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  left: 0;
+  width: calc(100% - .625rem*2);
+  max-width: 7.8125rem
+}
 .price {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: .3125rem
+}
+.price__quantity {
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  color: #fff
 }
 .price__currency {
   font-weight: 700;
@@ -334,6 +415,12 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center
+}
+.price__per {
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  color: #fff
 }
 .checkbox {
   position: relative;
@@ -377,6 +464,34 @@ h6 {
   width: 15px;
   height: 15px
 }
+.teaser {
+  display: grid;
+  grid-template-areas: ". cry cry." "mes mes mes mes" "pres pres pres pres" "eye eye eye eye" "photo photo photo photo" "opt opt opt opt" "fav fav fav fav";
+  grid-gap: 1.25rem;
+  width: 100%;
+  align-items: center;
+  justify-content: center
+}
+.teaser__item {
+  display: flex;
+  align-items: center;
+  gap: .625rem
+}
+.teaser__img {
+  width: 1.875rem;
+  height: 1.875rem;
+  background-color: rgba(149,100,170,.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.teaser__text {
+  font-weight: 700;
+  font-size: .75rem;
+  color: var(--primary);
+  width: 100%
+}
 .teaser__icon {
   position: relative;
   z-index: 2;
@@ -410,12 +525,21 @@ h6 {
 }
 .teaser-crystal__icon {
   height: 100%;
-  width: 100%;
-  color: var(--third)
+  width: 100%
 }
 @media (min-width:47.99875em) {
+  .swiper {
+    overflow: visible
+  }
+  .swiper-pagination {
+    display: none
+  }
   .logo {
-    display: flex
+    display: flex;
+    width: 9.8%
+  }
+  .logo__img {
+    width: 100%
   }
   .premium-mobile {
     display: none
@@ -648,142 +772,18 @@ h6 {
     color: var(--third)
   }
 }
-@media (min-width:61.99875em) {
-  .swiper {
-    overflow: visible
-  }
-}
 @media (min-width:73.125em) {
   .page__container {
     gap: 1.875rem
+  }
+  [class*=__container] {
+    padding: 0
   }
   .menu__list {
     gap: 2.5rem
   }
 }
 @media (min-width:20em) {
-  [class*=__container] {
-    padding: 0 1.25rem
-  }
-  .swiper {
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem
-  }
-  .logo {
-    display: none;
-    width: 9.8%
-  }
-  .logo__img {
-    width: 100%
-  }
-  .premium-mobile {
-    display: flex
-  }
-  .aside-menu {
-    display: none
-  }
-  .promo__title {
-    font-weight: 700;
-    font-size: 20px
-  }
-  .promo-banner {
-    display: none
-  }
-  .promo-card {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem
-  }
-  .promo-button {
-    width: 100%;
-    height: 3.4375rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 1rem;
-    background-color: var(--bg-third);
-    border-radius: var(--borderRadius)
-  }
-  .card__item {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    border-radius: var(--borderRadius);
-    height: 3.75rem
-  }
-  .card__content {
-    width: 93%;
-    height: 100%;
-    display: flex;
-    gap: .6875rem;
-    padding: .875rem;
-    justify-content: flex-end;
-    background: var(--primary);
-    border-radius: var(--borderRadius)
-  }
-  .card__button {
-    display: none
-  }
-  .billet {
-    padding: .1875rem .625rem;
-    border-radius: .3125rem;
-    overflow: hidden;
-    font-weight: 700;
-    font-size: .875rem;
-    background-color: var(--bg-third);
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    left: 0;
-    width: calc(100% - .625rem*2);
-    max-width: 7.8125rem
-  }
-  .price__quantity {
-    font-weight: 700;
-    font-size: 24px;
-    text-align: center;
-    color: #fff
-  }
-  .price__per {
-    font-weight: 700;
-    font-size: 24px;
-    text-align: center;
-    color: #fff
-  }
-  .teaser__item {
-    display: flex;
-    align-items: center;
-    gap: .625rem
-  }
-  .teaser__img {
-    width: 1.875rem;
-    height: 1.875rem;
-    background-color: rgba(149,100,170,.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center
-  }
-  .teaser__text {
-    font-weight: 700;
-    font-size: .75rem;
-    color: var(--primary);
-    width: 100%
-  }
-  .teaser {
-    display: grid;
-    grid-template-areas: ". cry cry." "mes mes mes mes" "pres pres pres pres" "eye eye eye eye" "photo photo photo photo" "opt opt opt opt" "fav fav fav fav";
-    grid-gap: 1.25rem;
-    width: 100%;
-    align-items: center;
-    justify-content: center
-  }
   .teaser-crystal__icon {
     height: 4.1875rem;
     width: 5.0625rem;
