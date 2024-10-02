@@ -1,8 +1,7 @@
-@media (min-width: toEm(320)) {
-	.aside-menu {
-		display: none;
-	}
+.aside-menu {
+	display: none;
 }
+
 @media (min-width: $mobile) {
 	.aside-menu {
 		position: static;
@@ -108,10 +107,8 @@
 	flex-direction: column;
 	gap: toRem(20);
 	&__title {
-		@media (min-width: toEm(320)) {
-			font-weight: 700;
-			font-size: 20px;
-		}
+		font-weight: 700;
+		font-size: 20px;
 		@media (min-width: $mobile) {
 			font-weight: 700;
 			font-size: toRem(40);
@@ -126,9 +123,7 @@
 	}
 
 	&-banner {
-		@media (min-width: toEm(320)) {
-			display: none;
-		}
+		display: none;
 		@media (min-width: $mobile) {
 			display: flex;
 			width: 100%;
@@ -168,29 +163,25 @@
 	}
 
 	&-card {
-		@media (min-width: toEm(320)) {
-			width: 100%;
-			display: flex;
-			flex-direction: column;
-			gap: toRem(20);
-		}
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		gap: toRem(20);
 		@media (min-width: $mobile) {
 			display: flex;
 		}
 	}
 
 	&-button {
-		@media (min-width: toEm(320)) {
-			width: 100%;
-			height: toRem(55);
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			font-weight: 700;
-			font-size: toRem(16);
-			background-color: var(--bg-third);
-			border-radius: var(--borderRadius);
-		}
+		width: 100%;
+		height: toRem(55);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 700;
+		font-size: toRem(16);
+		background-color: var(--bg-third);
+		border-radius: var(--borderRadius);
 		@media (min-width: $mobile) {
 			display: none;
 		}
@@ -212,15 +203,12 @@
 
 	// .card__item
 	&__item {
-		@media (min-width: toEm(320)) {
-			position: relative;
-			width: 100%;
-			display: flex;
-			justify-content: flex-end;
-			border-radius: var(--borderRadius);
-			height: toRem(60);
-		}
-
+		position: relative;
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+		border-radius: var(--borderRadius);
+		height: toRem(60);
 		@media (min-width: $mobile) {
 			border: toRem(2) solid var(--primary);
 			border-radius: var(--borderRadius);
@@ -283,16 +271,14 @@
 	}
 
 	&__content {
-		@media (min-width: toEm(320)) {
-			width: 93%;
-			height: 100%;
-			display: flex;
-			gap: toRem(11);
-			padding: toRem(14);
-			justify-content: flex-end;
-			background: var(--primary);
-			border-radius: var(--borderRadius);
-		}
+		width: 93%;
+		height: 100%;
+		display: flex;
+		gap: toRem(11);
+		padding: toRem(14);
+		justify-content: flex-end;
+		background: var(--primary);
+		border-radius: var(--borderRadius);
 		@media (min-width: $mobile) {
 			flex-direction: column;
 			width: 100%;
@@ -303,9 +289,7 @@
 
 	// .card__button
 	&__button {
-		@media (min-width: toEm(320)) {
-			display: none;
-		}
+		display: none;
 		@media (min-width: $mobile) {
 			display: flex;
 			align-items: center;
@@ -320,20 +304,18 @@
 }
 
 .billet {
-	@media (min-width: toEm(320)) {
-		padding: toRem(3) toRem(10);
-		border-radius: toRem(5);
-		overflow: hidden;
-		font-weight: 700;
-		font-size: toRem(14);
-		background-color: var(--bg-third);
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		left: toRem(0);
-		width: calc(100% - toRem(10) * 2);
-		max-width: toRem(125);
-	}
+	padding: toRem(3) toRem(10);
+	border-radius: toRem(5);
+	overflow: hidden;
+	font-weight: 700;
+	font-size: toRem(14);
+	background-color: var(--bg-third);
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: toRem(0);
+	width: calc(100% - toRem(10) * 2);
+	max-width: toRem(125);
 	@media (min-width: $mobile) {
 		display: none;
 		top: toRem(-12);
@@ -349,12 +331,10 @@
 	gap: toRem(5);
 	// .price__quantity
 	&__quantity {
-		@media (min-width: toEm(320)) {
-			font-weight: 700;
-			font-size: 24px;
-			text-align: center;
-			color: #fff;
-		}
+		font-weight: 700;
+		font-size: 24px;
+		text-align: center;
+		color: #fff;
 		@media (min-width: $mobile) {
 			font-weight: 700;
 			font-size: toRem(24);
@@ -376,12 +356,10 @@
 	}
 
 	&__per {
-		@media (min-width: toEm(320)) {
-			font-weight: 700;
-			font-size: 24px;
-			text-align: center;
-			color: #fff;
-		}
+		font-weight: 700;
+		font-size: 24px;
+		text-align: center;
+		color: #fff;
 		@media (min-width: $mobile) {
 			display: none;
 		}
@@ -442,12 +420,23 @@
 }
 
 .teaser {
+	display: grid;
+	grid-template-areas:
+		'. cry cry.'
+		'mes mes mes mes'
+		'pres pres pres pres'
+		'eye eye eye eye'
+		'photo photo photo photo'
+		'opt opt opt opt'
+		'fav fav fav fav';
+	grid-gap: toRem(20);
+	width: 100%;
+	align-items: center;
+	justify-content: center;
 	&__item {
-		@media (min-width: toEm(320)) {
-			display: flex;
-			align-items: center;
-			gap: toRem(10);
-		}
+		display: flex;
+		align-items: center;
+		gap: toRem(10);
 		@media (min-width: $mobile) {
 			display: flex;
 			flex-direction: column;
@@ -458,15 +447,13 @@
 
 	// .teaser__img
 	&__img {
-		@media (min-width: toEm(320)) {
-			width: toRem(30);
-			height: toRem(30);
-			background-color: rgba(149, 100, 170, 0.1);
-			border-radius: 50%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
+		width: toRem(30);
+		height: toRem(30);
+		background-color: rgba(149, 100, 170, 0.1);
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		@media (min-width: $mobile) {
 			width: toRem(50);
 			height: toRem(50);
@@ -483,12 +470,10 @@
 
 	// .teaser__text
 	&__text {
-		@media (min-width: toEm(320)) {
-			font-weight: 700;
-			font-size: toRem(12);
-			color: var(--primary);
-			width: 100%;
-		}
+		font-weight: 700;
+		font-size: toRem(12);
+		color: var(--primary);
+		width: 100%;
 		@media (min-width: $mobile) {
 			font-weight: 700;
 			text-align: center;
@@ -501,29 +486,12 @@
 		width: toRem(16);
 		height: toRem(16);
 		color: var(--primary);
-		@media (min-width: toEm(320)) {
-		}
 		@media (min-width: $mobile) {
 			width: toRem(20);
 			height: toRem(20);
 		}
 	}
 
-	@media (min-width: toEm(320)) {
-		display: grid;
-		grid-template-areas:
-			'. cry cry.'
-			'mes mes mes mes'
-			'pres pres pres pres'
-			'eye eye eye eye'
-			'photo photo photo photo'
-			'opt opt opt opt'
-			'fav fav fav fav';
-		grid-gap: toRem(20);
-		width: 100%;
-		align-items: center;
-		justify-content: center;
-	}
 	@media (min-width: $mobile) {
 		grid-template-columns: repeat(4, 120px);
 		grid-template-rows: repeat(3, auto);
@@ -562,15 +530,14 @@
 	&__icon {
 		height: 100%;
 		width: 100%;
-		color: var(--third);
+		@media (min-width: $mobile) {
+			height: 100%;
+			width: 100%;
+		}
 		@media (min-width: toEm(320)) {
 			height: toRem(67);
 			width: toRem(81);
 			color: var(--third);
-		}
-		@media (min-width: $mobile) {
-			height: 100%;
-			width: 100%;
 		}
 	}
 }

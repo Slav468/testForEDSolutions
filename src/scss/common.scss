@@ -32,20 +32,18 @@
 }
 
 [class*='__container'] {
-	padding: 0;
-	@media (min-width: toEm(320)) {
-		padding: 0 toRem(20);
+	padding: 0 toRem(20);
+	@media (min-width: toEm(1170)) {
+		padding: 0;
 	}
 }
 
 .swiper {
-	@media (min-width: toEm(320)) {
-		overflow: hidden;
-		display: flex;
-		flex-direction: column;
-		gap: toRem(20);
-	}
-	@media (min-width: $tablet) {
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	gap: toRem(20);
+	@media (min-width: $mobile) {
 		overflow: visible;
 	}
 }
@@ -92,6 +90,10 @@
 	width: fit-content;
 	align-self: center;
 	gap: toRem(8);
+
+	@media (min-width: $mobile) {
+		display: none;
+	}
 }
 
 .swiper-pagination-bullet {
