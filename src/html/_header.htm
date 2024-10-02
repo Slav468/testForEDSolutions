@@ -1,33 +1,35 @@
 <header class="header">
 	<div class="header__container">
 		<div class="header__wrapper">
-			<!-- Menu button -->
-			<div class="header__menu menu">
-				<button type="button" class="menu__icon icon-menu"><span></span></button>
-			</div>
+
 			<!-- Header logo -->
 			<a href="#" class="header__logo logo">
 				<img class='logo__img' src="@img/header/logo.png" alt="logo">
 			</a>
 			<!-- Header navigation -->
-			<nav class="header__nav navigation-header">
-				<ul class="navigation-header__list">
-					<li class="navigation-header__item">
-						<a href="#" class="navigation-header__link">People nearby</a>
-					</li>
-					<li class="navigation-header__item">
-						<a href="#" class="navigation-header__link">Search</a>
-					</li>
-					<li class="navigation-header__item premium">
-						<a href="#" class="navigation-header__link premium__link">Premium
-							<svg class=" premium__icon">
-								<use xlink:href="@img/icons/icons.svg#crystal"></use>
-							</svg>
-						</a>
+			<!-- Menu button -->
+			<div class="header__menu menu">
+				<button type="button" class="menu__icon icon-menu"><span></span></button>
+				<nav class="menu__body">
+					<ul class="menu__list">
+						<li class="menu__item"><a href="#" class="menu__link">People nearby</a></li>
+						<li class="menu__item"><a href="#" class="menu__link">Search</a></li>
+						<li class="menu__item premium"><a href="#" class="menu__link premium__link">
+								Premium
+								<svg class=" premium__icon">
+									<use xlink:href="@img/icons/icons.svg#crystal"></use>
+								</svg>
+							</a></li>
+					</ul>
+				</nav>
+			</div>
 
-					</li>
-				</ul>
-			</nav>
+			<div class="premium-mobile">
+				<svg class=" premium__icon">
+					<use xlink:href="@img/icons/icons.svg#crystal"></use>
+				</svg>
+			</div>
+
 		</div>
 	</div>
 </header>

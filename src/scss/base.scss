@@ -1,9 +1,9 @@
 // Загальний файл елементів форм
 // Для підключення/відключення стилів конкретного елемента форми дивись base/forms/forms.scss
-@import "base/forms/forms";
+@import 'base/forms/forms';
 
 // Стилі меню + бургер
-// @import "base/menu";
+@import 'base/menu';
 
 // Стилі попапів
 // @import "base/popup";

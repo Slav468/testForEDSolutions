@@ -14,7 +14,7 @@
 			padding: toRem(50) toRem(15) toRem(15) toRem(30);
 			transition: left 0.3s;
 			&::before {
-				content: "";
+				content: '';
 				position: fixed;
 				width: 100%;
 				height: toRem(70);
@@ -61,13 +61,13 @@
 		span,
 		&::before,
 		&::after {
-			content: "";
+			content: '';
 			transition: all 0.3s ease 0s;
 			right: 0;
 			position: absolute;
 			width: 100%;
 			height: toRem(2);
-			background-color: #000;
+			background-color: var(--inverse);
 		}
 		&::before {
 			top: 0;

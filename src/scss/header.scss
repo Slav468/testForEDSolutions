@@ -1,9 +1,6 @@
 .header {
 	width: 100%;
 	background-color: var(--bg-primary);
-	// .header__container
-	&__container {
-	}
 
 	// .header__wrapper
 	&__wrapper {
@@ -16,7 +13,6 @@
 
 	// .header__menu
 	&__menu {
-		display: none;
 	}
 
 	// .header__logo
@@ -36,15 +32,22 @@
 	}
 }
 
-.logo {
-	display: flex;
-	width: 9.8%;
-	&__img {
-		width: 100%;
+@media (min-width: toEm(320)) {
+	.logo {
+		display: none;
+		width: 9.8%;
+		&__img {
+			width: 100%;
+		}
+	}
+}
+@media (min-width: $mobile) {
+	.logo {
+		display: flex;
 	}
 }
 
-.navigation-header {
+.menu {
 	// .navigation__list
 	&__list {
 		display: flex;
@@ -87,5 +90,13 @@
 		width: toRem(18);
 		height: toRem(15);
 		color: var(--third);
+	}
+	&-mobile {
+		@media (min-width: toEm(320)) {
+			display: flex;
+		}
+		@media (min-width: $mobile) {
+			display: none;
+		}
 	}
 }

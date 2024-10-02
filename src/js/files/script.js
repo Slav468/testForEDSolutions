@@ -1,6 +1,8 @@
 // Підключення функціоналу "Чертоги Фрілансера"
 import { isMobile } from './functions.js';
 // Підключення списку активних модулів
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
 import { flsModules } from './modules.js';
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -41,4 +43,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	// вызываем функцию countdownTimer каждую секунду
 	timerId = setInterval(countdownTimer, 1000);
+
+	// Sliders
+	const mediaQuery = window.matchMedia(`(min-width: 767px)`);
+
+	let sliderCard;
+	mediaQuery.addEventListener('change', () => {
+		console.log('change');
+		if (window.innerWidth <= 767) {
+			sliderCard = new Swiper('.card-slider', {
+				modules: [Navigation, Pagination],
+				observer: true,
+				observeParents: true,
+				slidesPerView: 'auto',
+				spaceBetween: 12,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+			});
+		} else if (sliderCard && window.innerWidth >= 767) {
+			sliderCard.destroy(true, true);
+		} else {
+			return;
+		}
+	});
 });
